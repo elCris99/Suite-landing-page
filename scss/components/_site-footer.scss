@@ -2,16 +2,45 @@
 
 .site-footer {
   background-color: $footer-background-color;
-  color: $footer-text-color;
+  margin-top: calc(-875.150px + 402px);
+  padding-top: calc(875.150px - 402px);
+
+  @include mq(large){
+    margin-top: calc(-464px + 199px);
+    padding-top: calc(464px - 199px);
+  }
+
+  &__inner{
+    @include responsive-spacing(padding-block-start, 56px, 72px, 95px);
+    @include responsive-spacing(padding-block-end, 80px, 72px);
+  }
+
+  &__content{
+    display: grid;
+    justify-content: center;
+    row-gap: 33px;
+
+    @include mq(medium){
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__socials{
+    display: flex;
+    justify-content: space-between;
+    @include mq(medium){
+      width: 116px;
+      align-items: center;
+    }
+  }
+
 
   a {
-    color: $footer-link-color;
-    text-decoration: $footer-link-text-decoration;
-    font-family: $footer-link-font-family;
-    letter-spacing: $letter-spacing-loose;
-
+    transition: opacity 200ms ease-in;
     &:is(:hover, :focus) {
-      color: $footer-link-color-hover;
+      opacity: .5;
     }
   }
 }

@@ -1,0 +1,118 @@
+@use "../abstracts/" as *;
+
+.testimonial{
+
+    &__inner{
+        position: relative;
+        padding-top: 181px;
+
+        @include mq(large){
+            padding-top: 55px;
+            display: flex;
+        }
+    }
+
+    &__image{
+        /* width: 252px; */
+        width: clamp(100px, 100%, 252px);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        container-type: inline-size;
+        z-index: 1;
+        
+        img{
+            max-height: 402px;
+            margin-inline: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        img[data-type="small"]{
+            @container (min-width: 361px) {
+                display: none;
+                } 
+        }
+        img[data-type="large"]{
+            display: none;
+            @container (min-width: 361px) {
+                display: block;
+                } 
+        }
+
+        @include mq(medium){
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                width: 150%;
+                height: 50%;
+                background-image: url(/assets/pattern-blur.svg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 0;
+            }
+        }
+        
+        @include mq(large){
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            left: calc(clamp(0px, (100vw - 1200px) / 240 * 112, 112px));
+            transform: unset;
+            width: 375px;
+            img{
+                max-height: 600px;
+            }
+        }
+    }
+
+    &__body{
+        background-color: $color-neutral-800;
+        padding: 0 1rem 4rem;
+        border-radius: 15px;
+        @include responsive-spacing(padding-inline, 1rem, 3.625rem);
+
+        @include mq(large){
+            padding: 88px 7.8125rem;
+            width: 100%;
+            
+        }
+    }
+
+    &__curved-line{
+        padding-top: 270.85px;
+        margin-bottom: 37px;
+        img{
+            width: 49.27px;
+            margin-inline: auto;
+        }
+        @include mq(large){
+            padding: 0;
+            position: absolute;
+            top: clamp(150px, calc(150px + (100vw - 1200px) / 240 * 66.25), 216.25px);
+            left: clamp(320px, calc(320px + (100vw - 1200px) / 240 * 197.2), 517.2px);
+            img{
+                width: 64.05px;
+            }
+        }
+    }
+
+    &__text{
+        text-align: center;
+        display: grid;
+        row-gap: 40px;
+        max-width: 573px; 
+        margin-inline: auto;
+        @include mq(large){
+            max-width: 350px;
+            text-align: start;
+            margin-inline: unset;
+            margin-inline-start: auto;
+        }
+    }
+}

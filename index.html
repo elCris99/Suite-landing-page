@@ -5,11 +5,117 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="/src/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/scss/main.scss">
     <title>Title</title>
   </head>
   <body>
     
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <div>
+            <img src="/assets/logo.svg" alt="Web page logo">
+          </div>
+          <a class="button" href="#" data-type="secondary">Request Beta Access</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__main">
+              <div class="hero__text">
+                <h1 class="heading-1">A <span class="fw-bold">super <span class="key-word">solution</span> <br></span>for your <span class="fw-bold">business.</span></h1>
+                <p>Our marketing and sales automations help you scale your outreach to get more leads for your company.</p>
+                <a class="button" href="#" data-type="primary">Request Beta Access</a>
+              </div> 
+              <div class="hero__image" data-type="landscape">
+                <div class="hero__image-container" data-type="small-1">
+                  <img src="/assets/image-hero-landscape.webp" alt="">
+                </div>
+                <div class="hero__image-container" data-type="small-2">
+                  <img  src="/assets/image-hero-landscape@2x.webp" alt="">
+                </div>
+              </div>
+              <div class="hero__image" data-type="portrait">
+                <div class="hero__image-container" data-type="medium-1">
+                  <img src="/assets/image-hero-portrait.webp" alt="">
+                </div>
+                <div class="hero__image-container" data-type="medium-2">
+                  <img  src="/assets/image-hero-portrait@2x.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__stats">
+              <div>
+                <p class="hero__stats-number">2K+</p>
+                <p class="hero__stats-label">companies</p>
+              </div>
+              <div>
+                <p class="hero__stats-number">8</p>
+                <p class="hero__stats-label">languages</p>
+              </div>
+              <div>
+                <p class="hero__stats-number">1.2M</p>
+                <p class="hero__stats-label">leads</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <div class="container" data-type="full-bleed">
+          <div class="testimonial__inner">
+            <div class="testimonial__image">
+              <img data-type="small" src="/assets/image-jeremy-large.webp" alt="Jeremy Robinson">
+              <img data-type="large" src="/assets/image-jeremy-large@2x.webp" alt="Jeremy Robinson">
+            </div>
+            <div class="testimonial__body">
+              <div class="testimonial__curved-line">
+                <img src="/assets/pattern-curved-line-2.svg" alt="">
+              </div>
+              <div class="testimonial__text">
+                <h2 class="heading-2 clr-neutral-000">It just works</h2>
+                <p class="text-preset-set-4 clr-neutral-200">
+                  “I really like how it is an all-in-one solution that handle many of the tasks that you would normally need separate tools to do the same job. This thing is a miracle worker.”
+                </p>
+                <div>
+                  <p class="text-preset-set-static-1 clr-neutral-100">JEREMY ROBINSON</p>
+                  <p class="text-preset-set-static-2 clr-neutral-200">CMO, FYLO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__content">
+            <div>
+              <img class="mx-auto" src="/assets/logo.svg" alt="">
+            </div>
+            <div class="text-preset-set-static-3">Copyright - Suite</div>
+            <div class="site-footer__socials">
+              <a href="#"><img src="/assets/icon-facebook.svg" alt=""></a>
+              <a href="#"><img src="/assets/icon-twitter.svg" alt=""></a>
+              <a href="#"><img src="/assets/icon-instagram.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
+

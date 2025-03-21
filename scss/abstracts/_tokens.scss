@@ -7,9 +7,9 @@ $enable-media-query-dark-mode: false;
 
 // Contextual
 $color-text-default: $color-neutral-700;
-$color-background-default: $color-primary-100;
-$color-text-interactive-default: $color-accent-400;
-$color-text-interactive-hover: $color-accent-500;
+$color-background-default: $color-neutral-000;
+$color-text-interactive-default: $color-accent-1;
+$color-text-interactive-hover: $color-accent-1;
 
 // set to 0 to disable
 $letter-spacing-loose: 0;
@@ -43,15 +43,14 @@ $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
 
-$heading-color-default: $color-neutral-900;
-$heading-text-transform: uppercase;
+$heading-color-default: $color-neutral-800;
+$heading-text-transform: none;
 
 $heading-1-text-prexet: "set-heading-1";
 $heading-1-color: $heading-color-default;
 $heading-2-text-prexet: "set-heading-2";
 $heading-2-color: $heading-color-default;
-$heading-3-text-prexet: "set-heading-3";
-$heading-3-color: $heading-color-default;
+
 
 // layout
 $grid-gap: $size-6;
@@ -62,61 +61,57 @@ $flow-space-2: $size-8;
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
 $section-padding-block: clamp(5rem, 10vh, 6rem);
 
-$container-min-margin-inline: $size-4;
-$container-max-width: 64rem;
+$container-min-margin-inline-small: $size-4;
+$container-min-margin-inline-medium:$size-9;
+$container-min-margin-inline-large:10.25rem;
+
+$container-max-width: 69.375rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
 // site header
-$site-header-background-color: $color-neutral-900;
-$site-header-color: $color-neutral-200;
-$site-header-padding: $size-2 0;
-$site-header-margin: 0;
-$site-header-jusitifcation-small-screens: space-between;
-$site-header-jusitifcation-large-screens: space-between;
+$site-header-margin-block-start: ($size-6, $size-9, 3.125rem);
+$site-header-jusitifcation: space-between;
 $site-header-alignment: center;
 
-//navigation
-$navigation-color: $site-header-color;
-$navigation-color-hover: $color-neutral-000;
-$navigation-font-size: $font-size-400;
-$navigation-gap: $size-9;
-$navigation-link-text-decoration: none;
-$navigation-font-family: $font-family-base;
-$navigation-font-weight: $body-font-weight;
+//hero
+$hero-margin-block-start: (3.5rem, 5rem, 3.75rem);
+$hero-margin-block-end: (3.5rem, 5.75rem, 9rem);
 
-$navigation-header-background-color: $color-neutral-000;
-$navigation-header-color: $color-neutral-1000;
+$hero-inner-row-gap: 3.5rem;
+$hero-main-row-gap: $hero-inner-row-gap;
+$hero-main-max-width: minmax(0, 51.5rem);
+$hero-stats-gap: ($size-8, 0.625rem,3.9375rem);
 
-$navigation-link-color: $navigation-color;
-$navigation-link-color-hover: $navigation-color-hover;
-$navigation-link-background-color: $site-header-background-color;
-$navigation-link-background-color-hover: $color-neutral-800;
-$navigation-link-text-decoration: none;
-$navigation-link-padding: 1em 2em;
-
+ 
 // site footer
-$footer-background-color: $color-primary-300;
-$footer-text-color: $color-primary-900;
+$footer-background-color: $color-neutral-200;
+$footer-text-color: $color-accent-2;
 $footer-link-color: $color-neutral-100;
-$footer-link-color-hover: $color-primary-200;
+$footer-link-color-hover: $color-accent-2;
 $footer-link-font-family: $font-family-accent;
 $footer-link-text-decoration: none;
 
 // buttons
-$button-text-transform: uppercase;
-$button-padding: 0.75em 2em;
+$button-text-transform: none;
 $button-border: 0;
 $button-border-radius: $border-radius-1;
 
-$button-accent-color: $color-neutral-100;
-$button-accent-background: $color-accent-400;
-$button-accent-color-hover: $color-neutral-100;
-$button-accent-background-hover: $color-accent-500;
-$button-primary-color: $color-neutral-100;
-$button-primary-background: $color-primary-700;
-$button-primary-color-hover: $color-neutral-100;
-$button-primary-background-hover: $color-primary-800;
+$button-primary-padding: 0.875rem $size-8;
+$button-primary-color: $color-neutral-000;
+$button-primary-background: $color-neutral-800;
+$button-primary-color-hover: $button-primary-color;
+$button-primary-background-hover: linear-gradient( 
+  167deg, $color-accent-1, $color-accent-2, $color-accent-3);
+
+
+$button-secondary-padding-block: 0.75rem;
+$button-secondary-padding-inline: ($size-4, $size-6);
+$button-secondary-color: $color-neutral-800;
+$button-secondary-color-hover: $color-neutral-100;
+$button-secondary-background-hover: $color-neutral-800;
+
+
 
 //Lists
 $ul-bullet-color: $body-text-color;
@@ -130,29 +125,6 @@ $card-flow-spacing: $size-2;
 $card-padding: $size-8;
 $card-shadow: $box-shadow-1;
 $card-border-radius: $border-radius-2;
-$card-background-default: $color-primary-100;
+$card-background-default: $color-accent-2;
 $card-color-default: $body-text-color;
 $card-heading-color-default: $card-color-default;
-
-// forms
-// $form-label-color: $body-text-color;
-// $form-label-font-family: $body-font-family;
-// $form-label-font-weight: $font-weight-bold;
-// $form-label-font-size: $body-font-size;
-
-// $form-input-color: $body-text-color;
-// $form-input-font-family: $body-font-family;
-// $form-input-font-weight: $font-weight-semi-bold;
-// $form-input-font-size: $body-font-size;
-// $form-input-background-color: $color-neutral-100;
-// $form-input-border-default: 3px solid $color-primary-200;
-// $form-input-border-focus: 3px solid $color-primary-400;
-// $form-input-padding: $size-3;
-// $form-input-border-radius: $border-radius-1;
-
-// $form-placeholder-color: $color-primary-300;
-// $form-placeholder-font-family: $form-input-font-family;
-// $form-placeholder-font-weight: $form-input-font-weight;
-// $form-placeholder-font-size: $body-font-size;
-
-// $form-group-spacing: 0.5rem;

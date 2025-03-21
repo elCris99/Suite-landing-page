@@ -7,28 +7,37 @@
   cursor: pointer;
   text-decoration: none;
   text-transform: $button-text-transform;
-  padding: $button-padding;
+  
   border: $button-border;
   border-radius: $button-border-radius;
   transition: 275ms ease;
 
-  &[data-type="accent"] {
-    background-color: $button-accent-background;
-    color: $button-accent-color;
-
-    &:is(:hover, :focus) {
-      background-color: $button-accent-background-hover;
-      color: $button-accent-color-hover;
-    }
-  }
 
   &[data-type="primary"] {
-    background-color: $button-primary-background;
+    background: $button-primary-background;
     color: $button-primary-color;
+    padding: $button-primary-padding;
+    @include text-preset(set-static-1);
 
     &:is(:hover, :focus) {
-      background-color: $button-primary-background-hover;
       color: $button-primary-color-hover;
+      background: $button-primary-background-hover; 
     }
   }
+
+  &[data-type="secondary"] {
+    color: $button-secondary-color;
+    border: 2px solid $button-secondary-color;
+    padding-block: $button-secondary-padding-block;
+    @include text-preset(set-3);
+    @include responsive-spacing(padding-inline, $button-secondary-padding-inline...);
+
+
+    &:is(:hover, :focus) {
+      background-color: $button-secondary-background-hover;
+      color: $button-secondary-color-hover;
+    }
+  }
+
+
 }

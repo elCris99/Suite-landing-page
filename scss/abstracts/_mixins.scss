@@ -1,9 +1,11 @@
 @use "sass:meta";
 @use "sass:math";
 @use "sass:map";
+@use "sass:list";
 @use "breakpoints" as *;
+@use "typography" as *;
 @use "tokens" as *;
-
+@use "colors" as *;
 @mixin text-preset($preset){
   font-size: var(--#{$preset}-fs);
   line-height: var(--#{$preset}-lh);
@@ -55,7 +57,9 @@
   $medium: if(list.length($values)>1, list.nth($values,2),null);
   $large: if(list.length($values)>2, list.nth($values, 3), null);
 
-    #{$property}: $small;
+    &{
+      #{$property}: $small;
+    }
     
     @if $medium {
       @include mq(medium) {

@@ -12,9 +12,3 @@
     $heading-2-color
   );
 }
-.heading-3 {
-  @include heading(
-    $heading-3-text-prexet,
-    $heading-3-color
-  );
-}
