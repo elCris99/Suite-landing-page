@@ -33,6 +33,7 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
+            z-index: 2;
             // max-width: 35.8125rem;
           }
           @include mq(large){
